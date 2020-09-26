@@ -3,11 +3,14 @@
   "id": "deadtotems",
   "version": "${version}",
   "name": "Dead Totems",
-  "description": "",
+  "description": "Start actually using your totems.",
   "authors": [
     "dzwdz"
   ],
-  "contact": {},
+  "contact": {
+    "sources": "https://github.com/dzwdz/deadtotems",
+    "issues": "https://github.com/dzwdz/deadtotems/issues"
+  },
   "license": "MPL-2.0",
   "icon": "assets/deadtotems/icon.png",
   "environment": "*",
@@ -24,5 +27,12 @@
     "fabric": "*",
     "minecraft": "1.16.3",
     "nbtcrafting": "*"
+  },
+  "custom": {
+    "modupdater": {
+      "strategy": "curseforge",
+      "projectID": 409997,
+      "strict": false
+    }
   }
 }
