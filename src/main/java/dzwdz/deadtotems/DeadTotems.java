@@ -9,7 +9,7 @@ import net.minecraft.util.registry.Registry;
 
 public class DeadTotems implements ModInitializer {
 
-    public static final Item DEAD_TOTEM = new Item(new FabricItemSettings().group(ItemGroup.COMBAT));
+    public static final Item DEAD_TOTEM = new Item(new FabricItemSettings().group(ItemGroup.COMBAT).maxCount(1));
 
     @Override
     public void onInitialize() {
