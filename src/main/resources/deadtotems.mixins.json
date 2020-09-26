@@ -4,7 +4,8 @@
   "package": "dzwdz.deadtotems.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
   ],
