@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "deadtotems",
+  "version": "${version}",
+  "name": "Dead Totems",
+  "description": "",
+  "authors": [
+    "dzwdz"
+  ],
+  "contact": {},
+  "license": "MPL-2.0",
+  "icon": "assets/deadtotems/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dzwdz.deadtotems.DeadTotems"
+    ]
+  },
+  "mixins": [
+    "deadtotems.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.9.3+build.207",
+    "fabric": "*",
+    "minecraft": "1.16.3"
+  }
+}
