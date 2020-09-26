@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "dzwdz.deadtotems.DeadTotems"
+    ],
+    "modmenu": [
+      "dzwdz.deadtotems.ModMenuIntegration"
     ]
   },
   "mixins": [

@@ -1,3 +1,5 @@
 {
-  "item.deadtotems.dead_totem": "Dead Totem"
+  "item.deadtotems.dead_totem": "Dead Totem",
+  "text.autoconfig.deadtotems.title": "Dead Totems",
+  "text.autoconfig.deadtotems.option.vanishOnDeath": "Destroy Dead Totems on player death"
 }

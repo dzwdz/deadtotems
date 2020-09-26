@@ -1,7 +1,6 @@
 package dzwdz.deadtotems.mixin;
 
 import dzwdz.deadtotems.DeadTotems;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
@@ -21,10 +20,12 @@ public class PlayerEntityMixin {
             method = "vanishCursedItems"
     )
     public void vanishDeadTotems(CallbackInfo callbackInfo) {
-        for(int i = 0; i < inventory.size(); ++i) {
-            ItemStack itemStack = inventory.getStack(i);
-            if (!itemStack.isEmpty() && itemStack.getItem() == DeadTotems.DEAD_TOTEM) {
-                inventory.removeStack(i);
+        if (DeadTotems.config.vanishOnDeath) {
+            for (int i = 0; i < inventory.size(); ++i) {
+                ItemStack itemStack = inventory.getStack(i);
+                if (!itemStack.isEmpty() && itemStack.getItem() == DeadTotems.DEAD_TOTEM) {
+                    inventory.removeStack(i);
+                }
             }
         }
     }
