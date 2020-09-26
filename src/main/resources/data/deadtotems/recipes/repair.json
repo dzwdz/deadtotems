@@ -1,0 +1,13 @@
+{
+  "type": "nbtcrafting:anvil",
+  "base": {
+    "item": "deadtotems:dead_totem"
+  },
+  "ingredient": {
+    "item": "minecraft:gold_block"
+  },
+  "result": {
+    "item": "minecraft:totem_of_undying"
+  },
+  "levels": 15
+}
