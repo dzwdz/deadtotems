@@ -1,10 +1,10 @@
 plugins {
-    id 'fabric-loom' version '0.5-SNAPSHOT'
+    id 'fabric-loom' version '1.0.9'
     id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = "${project.mod_version}+${project.minecraft_version}"
@@ -26,19 +26,19 @@ dependencies {
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
-    modImplementation "de.siphalor:nbtcrafting-1.16:${project.nbtcrafting_version}"
+    modImplementation "de.siphalor:nbtcrafting:2.2.3"
 
-    modApi("me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig1u_version}") {
+    modApi("me.sargunvohra.mcmods:autoconfig1u:3.4.0") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig1u_version}"
+    include "me.sargunvohra.mcmods:autoconfig1u:3.4.0"
 
-    modApi("me.shedaniel.cloth:config-2:${project.clothconfig_version}") {
+    modApi("me.shedaniel.cloth:clothconfig:6.3.81") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+    include "me.shedaniel.cloth:clothconfig:6.3.81"
 
-    modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
+    modImplementation "io.github.prospector:modmenu:3.2.4"
 }
 
 processResources {
@@ -47,9 +47,6 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         include "fabric.mod.json"
         expand "version": project.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
         exclude "fabric.mod.json"
     }
 }
